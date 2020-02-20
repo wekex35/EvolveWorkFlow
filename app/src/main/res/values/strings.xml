@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Evolve WorkFlow</string>
+    <string name="approve">Approve</string>
+    <string name="forward">Forward</string>
+    <string name="heading">Heading</string>
+    <string name="inovice_id">Inovice Id</string>
+    <string name="invoice_details">Invoice Details</string>
+    <string name="invoice_history">Invoice History</string>
+    <string name="key">-</string>
+    <string name="message">Message</string>
+    <string name="query">Query</string>
+    <string name="query_invoice">Query</string>
+    <string name="query_invoices">Query Invoice</string>
+    <string name="refer">Refer</string>
+    <string name="reject">Reject</string>
+    <string name="send">Send</string>
+    <string name="subject">Subject</string>
+    <string name="to">To,</string>
+    <string name="value">-</string>
+    <string name="view_image">Image</string>
+</resources>

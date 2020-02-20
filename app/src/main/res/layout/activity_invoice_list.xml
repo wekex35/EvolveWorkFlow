@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InvoiceList">
+    <LinearLayout android:orientation="horizontal"
+        android:id="@+id/parent"
+        android:background="@color/white"
+        android:padding="@dimen/dp_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:id="@+id/key"
+            android:paddingTop="@dimen/dp_5"
+            android:paddingBottom="@dimen/dp_5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Invoice Code"
+            android:layout_weight="0.4"
+            android:paddingStart="@dimen/dp_5"/>
+
+        <TextView
+            android:textStyle="bold"
+            android:text="Vendor Name"
+            android:id="@+id/value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.6"
+            android:hint="@string/value"
+            android:paddingStart="@dimen/dp_5"
+            android:paddingTop="@dimen/dp_5"
+            android:paddingBottom="@dimen/dp_5"
+            android:textAlignment="center"
+            android:textColor="@color/black" />
+    </LinearLayout>
+    <include layout="@layout/singleline"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/invoiceRecyclerList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</LinearLayout>

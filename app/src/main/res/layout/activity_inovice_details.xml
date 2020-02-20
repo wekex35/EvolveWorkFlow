@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomTab"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <LinearLayout
+            android:id="@+id/detailsHolder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottomTab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/approve"
+            style="@style/invoice_option_tabs"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/tick"
+            android:gravity="center"
+            android:onClick="next"
+            android:text="@string/approve" />
+
+        <Button
+            android:id="@+id/reject"
+            style="@style/invoice_option_tabs"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/cancel"
+            android:gravity="center"
+            android:onClick="next"
+            android:text="@string/reject" />
+
+        <Button
+            android:id="@+id/refer"
+            style="@style/invoice_option_tabs"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/refer"
+            android:gravity="center"
+            android:onClick="refer"
+            android:text="@string/forward" />
+
+        <Button
+            android:id="@+id/viewimage"
+            style="@style/invoice_option_tabs"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/image"
+            android:gravity="center"
+            android:onClick="ViewImage"
+            android:text="@string/view_image" />
+
+        <Button
+            android:id="@+id/sentquery"
+            style="@style/invoice_option_tabs"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/business_and_finance"
+            android:gravity="center"
+            android:onClick="query"
+            android:text="@string/query_invoice" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
