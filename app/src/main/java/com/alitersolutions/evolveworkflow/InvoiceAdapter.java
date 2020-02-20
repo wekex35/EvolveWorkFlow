@@ -26,7 +26,7 @@ class InvoiceAdapter extends RecyclerView.Adapter<InvoiceAdapter.InoListView> {
     @NonNull
     @Override
     public InoListView onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.two_item_list,parent,false);
+        View view = LayoutInflater.from(context).inflate(R.layout.invoice_list_item,parent,false);
         return new InoListView(view);
     }
 
@@ -41,18 +41,21 @@ class InvoiceAdapter extends RecyclerView.Adapter<InvoiceAdapter.InoListView> {
     }
 
     public class InoListView extends RecyclerView.ViewHolder {
-        TextView invoice,venderName;
+        TextView invoice,venderName,amount;
         LinearLayout parent;
         public InoListView(@NonNull View itemView) {
             super(itemView);
-            invoice = itemView.findViewById(R.id.key);
-            venderName = itemView.findViewById(R.id.value);
+            invoice = itemView.findViewById(R.id.doc_no);
+            venderName = itemView.findViewById(R.id.vendor_name);
+            amount = itemView.findViewById(R.id.amount);
             parent = itemView.findViewById(R.id.parent);
         }
 
         public void setData(InoviceDetailsModels inoviceDetailsModels, final int position) {
             invoice.setText(inoviceDetailsModels.getInvoiceDocNo());
             venderName.setText(inoviceDetailsModels.getVendorName());
+            amount.setText(inoviceDetailsModels.getInvoiceAmount());
+
             parent.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
